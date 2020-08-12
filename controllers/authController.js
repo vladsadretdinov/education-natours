@@ -5,7 +5,6 @@ const User = require('../models/userModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const sendEmail = require('../utils/email');
-const { collection } = require('../models/userModel');
 
 const signToken = (id) => {
   return jwt.sign(
