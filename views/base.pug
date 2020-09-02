@@ -1,16 +1,19 @@
 doctype html
 html
   head
-    title Natours | #{tour}
-    link(rel="stylesheet", href="css/style.css")
-    link(rel="shortcut icon", type="image/png", href="img/favicon.png")
+    meta(charset='UTF-8') 
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='shortcut icon', type='image/png', href='/img/favicon.png')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+    title Natours | #{title}
   body
-    h1= tour
-    h2= user.toUpperCase()
+    //- HEADER
+    include _header
 
-    - const x = 9;
-    h2= 2 * x
+    //- CONTENT
+    block content
+      h1 This is a placeholde heading 
 
-    //- h1 The Park Cmaper
-    p This is just some text
-     
+    //- FOOTER
+    include _footer
